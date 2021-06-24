@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+* {
+  font-family: "Roboto", "sans-serif";
+  font-size: 18px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  background-color: #FFF8DC
+}
+
+.container {
+  top: 50%;
+  left: 35%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  width: 256px;
+  text-align: center;
+  border: 1px solid black;
+  background-color: black;
+  border-radius: 5px;
+}
+
+#zero {
+  grid-column: span 2;
+}
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(60px, auto);
+}
+
+input[type="text"] {
+  height: 100px;
+  width: 249px;
+  background-color: #333333;
+  border: 0px;
+  color: white;
+  text-align: right;
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+#operators {
+  background-color: #ff8c00;
+}
+
+.midgrey {
+  background-color: #4d4d4d;
+}
+button {
+  margin: 0.5px;
+  border: none black;
+  color: white;
+  background-color: #737373;
+}
+button:hover {
+  background-color: #4caf50; /* Green */
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+}
+.container2 {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  top: 213px;
+  left: 385px;
+  height: 426px;
+  width: 256px;
+  text-align: center;
+  justify-content: center;
+  border: 1px solid black;
+  background-color: grey;
+  border-radius: 5px;
+  font-size: 8px;
+}
+.history{
+    color: white;
+  text-align: center;
+  justify-content: center;
+  display: block;
+  width: 255px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.clean-hist {
+    color: black;
+    margin: 0px;
+    display: flex;
+    background-color: red;
+    position: absolute;
+    top: 94%;
+    left: 43%;
 }
