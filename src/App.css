@@ -44,22 +44,28 @@ input[type="text"] {
   font-size: 25px;
   font-weight: 500;
   letter-spacing: 1px;
+  flex:1;
 }
 
 #operators {
   background-color: #ff8c00;
 }
+#operators:hover {
+  background-color: #4caf50; /* Green */
+  color: white;
+}
 
 .midgrey {
   background-color: #4d4d4d;
 }
-button {
+
+.btn {
   margin: 0.5px;
   border: none black;
   color: white;
   background-color: #737373;
 }
-button:hover {
+.btn:hover {
   background-color: #4caf50; /* Green */
   color: white;
 }
@@ -67,7 +73,7 @@ input:focus,
 input:active,
 button:focus,
 button:active {
-  outline: none;
+  box-shadow: inset 0px 0px 80px 0px rgba(0,0,0,0.25);
 }
 .container2 {
   position: absolute;
@@ -90,14 +96,28 @@ button:active {
   justify-content: center;
   display: block;
   width: 255px;
+  background-color: #737373
+}
+.history:hover {
+  background-color: #4caf50; /* Green */
+  color: white;
 }
 
 .clean-hist {
-    color: black;
-    margin: 0px;
-    display: flex;
-    background-color: red;
-    position: absolute;
-    top: 94%;
-    left: 43%;
+  color: black;
+  margin: 0px;
+  display: flex;
+  background-color: red;
+  position: absolute;
+  top: 94%;
+  left: 43%;
+}
+    
+
+
+#scroller {
+ 
+  overflow-y: scroll;
+  scrollbar-color: rebeccapurple;
+  
 }
